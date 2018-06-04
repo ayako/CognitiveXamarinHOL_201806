@@ -4,15 +4,15 @@
 
 このセクションでは Azure Cognitive Services を利用したデモサイトに触れ、Cognitive Services の 各 API の動作を確認します。 
  
-### Cognitive Services の動作をデモサイトで確認する 
+### 1-1. Cognitive Services の動作をデモサイトで確認する 
 Cognitive Services の各 API 詳細画面には、デモが用意されており、サブスクリプション 申込なしで動作を確認できます。 以下の手順でいくつかの API の動作を確認します。
 
 1. ブラウザーで Cognitive Services の Web サイト (http://microsoft.com/cognitive) を開きます。こちらのサイトでは、Cognitive Services の 5 つの API グループ別 (視覚、音声、知識、言語、検索) に説明が書かれています。 
 
-2. [視覚] をクリックします。[視覚] タブ内には、Computer Vision API など 画像・動画の分析をおこなう API が表示されています。
+2. [視覚] をクリックします。[視覚] タブ内には、Computer Vision など 画像・動画の分析をおこなう API が表示されています。
 
-#### Computer Vision API
-3. Computer Vision API をクリックして開きます。Computer Vision API の下記の機 能およびデモが用意されています。 
+#### Computer Vision
+3. Computer Vision をクリックして開きます。Computer Vision の下記の機 能およびデモが用意されています。 
     - 画像の分析によるタグ付け、キャプション生成、顔検出、カラー抽出 
     - OCR (画像からの文字認識) 
     - 著名人およびランドマークの検出 
@@ -22,8 +22,8 @@ Cognitive Services の各 API 詳細画面には、デモが用意されてお�
 
 5. ブラウザーのバック (←) ボタンでひとつ前のページ ([視覚] グループのページ) に戻ります。 
 
-#### Face API
-6. 今度は Face API をクリックして開きます。Face API の下記の機能およびデモが用 意されています。 
+#### Face
+6. 今度は Face をクリックして開きます。Face の下記の機能およびデモが用意されています。 
     - 顔検出 : 画像内の顔の位置、顔属性 (年齢、性別、感情、眼鏡や髭、髪の色など) 
     - 顔識別、似た顔の検索、グループ化
 
@@ -70,3 +70,78 @@ Cognitive Services の各 API 詳細画面には、デモが用意されてお�
 22. 今度は Bing Autosuggest API をクリックします。こちらはキーワードの一部を入力すると、それに続く言葉を推測し、表示します。 
 
 > 他にも Cognitive Services にはさまざまな機能を提供する API が用意されています。 Cognitive Services の API の機能を調べる場合は、まず Web サイト (http://microsoft.com/cognitive) のデモサイトで機能や動作を確認してください。 
+
+
+### 1-2. API レファレンス および Postman から Cognitive Services の API の動作を確認する
+
+Postman (https://www.getpostman.com/) は、各種 Web API にリクエスト(GET, POST, ...) して、その結果を取得できるツールです。
+
+このセクションでは、Postman 経由で Cognitive Services の Face API にアクセスして、結果を取得して動作を確認します。
+
+#### API レファレンスからの Face API (Detect) の動作確認
+1. ブラウザーで Cognitive Services の Web サイト (http://microsoft.com/cognitive) を開きます。[視覚] をクリックし、[視覚] グループのページで Face をクリックして開きます。
+
+2. [API リファレンス] をクリックして、Face API のリファレンスを開きます。
+
+3. [Face API] の API Reference で、Face > Detect が選択されていることを確認します。
+
+4. サブスクリプションで指定されたロケーションを選択してクリックします。
+
+5. API の動作確認画面が表示されます。各パラメーターには以下の値を入力します。(この情報は次のセクションで利用します)
+    - Query parameters
+        - returnFaceId : False
+        - returnFaceLandmarks : False
+        - returnFaceAttributes : age,gender,emotion
+    - Headers
+        - Content-Type : application/json
+        - Ocp-Apim-Subscription-Key : 取得したサブスクリプションキー
+    - Request Body
+        {
+            "url": "https://how-old.net/images/faces2/main007.jpg"
+        }
+
+6. すると、以下のように API の Request URL および API への送信内容が生成されます。(この情報は次のセクションで利用します)
+
+> API の Request URL
+Request URL
+https://westus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=false&returnFaceLandmarks=false&returnFaceAttributes=gender,age,emotion
+
+> API への送信内容
+HTTP request
+POST https://westus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=false&returnFaceLandmarks=false&returnFaceAttributes=gender,age,emotion HTTP/1.1
+Host: westus.api.cognitive.microsoft.com
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: ••••••••••••••••••••••••••••••••
+{
+    "url": "https://how-old.net/images/faces2/main007.jpg"
+}
+
+7. [Send] をクリックすると、リクエストが送信され、その結果が下に表示されます。
+
+>Response status に「200 OK」と表示されれば、正常にリクエスト送信を行って結果を取得できています。
+- 「401 Access Denied」と表示される場合 → サブスクリプションキーを確認してみましょう
+- 「400 Bad Request」と表示される場合 → パラメーターや Request Body を確認してみましょう。Request Body で指定したURLの画像にアクセスできますか？
+
+無事 Web API にリクエストを送信して結果を取得できたら、今度は同内容を Postman 経由で実行してみましょう。
+
+
+#### Postman からの Face API (Detect) の動作確認
+
+8. Postman を起動します。初期ラウンチ画面から [Create New] のタブで [Request] をクリックします。
+> 初期ラウンチ画面が表示されない場合は、[+New] をクリックして [Request] をクリックします。
+
+9. [SAVE REQUEST] 画面で、Request name に "Face API - Detect" と入力します。Select a collection or folder to save to: の欄では [+ Create Collection] をクリックして、"Cognitive Services" と入力して作成したあと、そのフォルダーを選択します。[Save] をクリックして保存します。
+
+10. 作成した Face API - Detect の設定画面が表示されます。メソッドを POST に設定しておきます。
+
+11. 6 で表示された Request URL をコピーし、Postman の設定画面にある Enter Request URL の欄にペーストします。
+
+12. Postman の設定画面で [Header] をクリックし、5 で入力した Header の情報を入力します。
+
+13. Postman の設定画面で [Body] をクリック、[raw] を選択して、5 で入力した Request Body の情報を入力します。
+
+14. [Send] をクリックして、API にリクエストを送信します。「Status: 200 OK」と表示されて結果が表示されれば、正常にリクエスト送信を行って結果を取得できています。
+
+> 以下のように情報を修正すると、PC にある画像ファイルをそのまま API に送信して分析結果を取得できます。
+12 で設定した Header 情報:   Content-Type → application/octet-stream に変更
+13 で設定した Body 情報: [binary] を選択して、[ファイル選択]をクリックして PC にある画像ファイルを選択 (4MB以下)
