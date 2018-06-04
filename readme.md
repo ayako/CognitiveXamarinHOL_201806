@@ -1,4 +1,4 @@
-#　Azure Cognitive Services を活用した Xamarin によるマルチプラットフォームアプリ開発 ハンズオン
+# Azure Cognitive Services を活用した Xamarin によるマルチプラットフォームアプリ開発 ハンズオン
 
 マイクロソフトの Azure Cognitive Services は、ご自身で準備しなくとも、画像の認識や自然言語の分析など、AI・人工知能 (人間の認知(Cognitive)機能) を Web API としてすぐに利用できるサービスです。
 https://azure.microsoft.com/ja-jp/services/cognitive-services/
