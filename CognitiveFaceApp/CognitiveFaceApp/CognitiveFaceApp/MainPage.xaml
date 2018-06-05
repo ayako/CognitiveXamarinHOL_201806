@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CognitiveFaceApp"
+             x:Class="CognitiveFaceApp.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image x:Name="ImagePreview" Grid.Row="0" HorizontalOptions="Center"/>
+                <Button Grid.Row="1" Clicked="RunButton_OnClicked" Text="写真の選択" />
+                <Button Grid.Row="2" Clicked="ResetButton_OnClicked" Text="リセット" />
+
+                <StackLayout Grid.Row="3" HorizontalOptions="Center">
+                    <Label x:Name="Age">年齢</Label>
+                    <Label x:Name="Gender">性別</Label>
+                    <Label x:Name="Emotion">表情</Label>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
