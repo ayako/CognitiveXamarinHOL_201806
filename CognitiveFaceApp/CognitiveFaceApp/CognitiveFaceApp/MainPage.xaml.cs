@@ -9,12 +9,12 @@ using PCLExt.FileStorage.Files;
 
 namespace CognitiveFaceApp
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+	public partial class MainPage : ContentPage
+	{
+		public MainPage()
+		{
+			InitializeComponent();
+		}
 
         private async void RunButton_OnClicked(object sender, EventArgs e)
         {
@@ -55,10 +55,7 @@ namespace CognitiveFaceApp
             // 判定結果を配置
             Age.Text = "年齢 : " + faceResult.Age;
             Gender.Text = "性別 : " + faceResult.Gender;
-
-            Emotion.Text = "表情 : ";
-            Emotion.Text = "笑顔 : " + (faceResult.Smile * 100).ToString("##0") + "点";
-
+            Smile.Text = "笑顔 : " + (faceResult.Smile * 100).ToString("##0") + "点";
 
         }
 
@@ -68,41 +65,7 @@ namespace CognitiveFaceApp
 
             Age.Text = "年齢";
             Gender.Text = "性別";
-            Emotion.Text = "表情";
-        }
-
-
-        public class FaceDetectResult
-        {
-            public double Age { get; set; }
-            public string Gender { get; set; }            
-            public double Smile { get; set; }
-        }
-
-        public static async Task<FaceDetectResult> DetectFaceAsync(string photo)
-        {
-            // Face API 呼び出し準備
-            var apiKey = "c432ceb56c32447c8abac13509da5d93";
-            var apiLocation = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0";
-            var client = new FaceServiceClient(apiKey, apiLocation);
-
-            // Face API で判定
-            var file = new FileFromPath(photo);
-            var imageStream = file.Open(FileAccess.Read);
-
-            var attributes = new FaceAttributeType[] {
-                FaceAttributeType.Age,FaceAttributeType.Gender,FaceAttributeType.Smile,
-            };
-            var result = await client.DetectAsync(imageStream, false, false, attributes);
-
-            // 判定結果を代入
-            var detectResult = new FaceDetectResult();
-
-            detectResult.Age = result[0].FaceAttributes.Age;
-            detectResult.Gender = result[0].FaceAttributes.Gender;
-            detectResult.Smile = result[0].FaceAttributes.Smile;
-
-            return detectResult;
+            Smile.Text = "笑顔";
         }
 
         public static async Task<string> TakePhotoAsync()
@@ -130,8 +93,41 @@ namespace CognitiveFaceApp
 
             // 保存したファイルのパスを取得
             return photo.Path;
+        }
 
+        public class FaceDetectResult
+        {
+            public double Age { get; set; }
+            public string Gender { get; set; }
+            public double Smile { get; set; }
+        }
+
+        public static async Task<FaceDetectResult> DetectFaceAsync(string photoPath)
+        {
+            // Face API 呼び出し準備
+            var apiKey = "c432ceb56c32447c8abac13509da5d93";
+            var apiLocation = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0";
+            var client = new FaceServiceClient(apiKey, apiLocation);
+
+            // Face API で判定
+            var file = new FileFromPath(photoPath);
+            var imageStream = file.Open(FileAccess.Read);
+
+            var attributes = new FaceAttributeType[] {
+                FaceAttributeType.Age,FaceAttributeType.Gender,FaceAttributeType.Smile,
+            };
+            var result = await client.DetectAsync(imageStream, false, false, attributes);
+
+            // 判定結果を代入
+            var detectResult = new FaceDetectResult();
+
+            detectResult.Age = result[0].FaceAttributes.Age;
+            detectResult.Gender = result[0].FaceAttributes.Gender;
+            detectResult.Smile = result[0].FaceAttributes.Smile;
+
+            return detectResult;
         }
 
     }
+
 }

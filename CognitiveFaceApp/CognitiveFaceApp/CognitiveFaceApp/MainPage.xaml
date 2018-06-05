@@ -19,7 +19,7 @@
                 <StackLayout Grid.Row="3" HorizontalOptions="Center">
                     <Label x:Name="Age">年齢</Label>
                     <Label x:Name="Gender">性別</Label>
-                    <Label x:Name="Emotion">表情</Label>
+                    <Label x:Name="Smile">笑顔</Label>
                 </StackLayout>
             </Grid>
         </StackLayout>
