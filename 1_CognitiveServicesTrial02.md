@@ -127,7 +127,7 @@ https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=
 
     - Headers
         - Content-Type : application/json
-        - Ocp-Apim-Subscription-Key : 取得したサブスクリプションキー
+        - Ocp-Apim-Subscription-Key : Face API キー
 
 <img src="media/CognitiveXamarinHOL_201806_45.PNG" width="450" height="291">  
 
