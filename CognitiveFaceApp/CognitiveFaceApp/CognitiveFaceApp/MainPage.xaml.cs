@@ -106,8 +106,8 @@ namespace CognitiveFaceApp
         {
             // Face API 呼び出し準備
             var apiKey = "c432ceb56c32447c8abac13509da5d93";
-            var apiLocation = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0";
-            var client = new FaceServiceClient(apiKey, apiLocation);
+            var apiEndpoint = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0";
+            var client = new FaceServiceClient(apiKey, apiEndpoint);
 
             // Face API で判定
             var file = new FileFromPath(photoPath);
