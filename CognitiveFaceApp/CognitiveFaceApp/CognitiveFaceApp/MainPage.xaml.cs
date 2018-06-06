@@ -105,8 +105,8 @@ namespace CognitiveFaceApp
         public static async Task<FaceDetectResult> DetectFaceAsync(string photoPath)
         {
             // Face API 呼び出し準備
-            var apiKey = "c432ceb56c32447c8abac13509da5d93";
-            var apiEndpoint = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0";
+            var apiKey = "YOUR_API_KEY";
+            var apiEndpoint = "https://YOUR_API_LOCATION.api.cognitive.microsoft.com/face/v1.0";
             var client = new FaceServiceClient(apiKey, apiEndpoint);
 
             // Face API で判定
