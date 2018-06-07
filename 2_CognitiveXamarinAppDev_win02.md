@@ -26,8 +26,8 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Image x:Name="ImagePreview" Grid.Row="0" HorizontalOptions="Center"/>
-                <Button Grid.Row="1" Clicked="RunButton_OnClicked" Text="写真の選択" />
-                <Button Grid.Row="2" Clicked="ResetButton_OnClicked" Text="リセット" />
+                <Button Grid.Row="1" Text="写真の選択" />
+                <Button Grid.Row="2" Text="リセット" />
 
                 <StackLayout Grid.Row="3" HorizontalOptions="Center">
                     <Label x:Name="Age">年齢</Label>
@@ -49,16 +49,22 @@
 6. アプリのウインドウを閉じ、Visual Studio の上部ツールバーから [デバッグの停止] をクリックして、デバッグを終了します。  
 <img src="media/CognitiveXamarinHOL_201806_86.PNG" width="450" height="291">
 
+```
+7. [写真の選択] ボタン、および [リセット] ボタンが押される動作を取得するため、それぞれのボタンに Clicked イベントハンドラーを追加します。
+<Button Grid.Row="1" Clicked="RunButton_OnClicked" Text="写真の選択" />
+<Button Grid.Row="2" Clicked="ResetButton_OnClicked" Text="リセット" />
+```
+
 
 >MainPage.xaml で使用されているのは Extensible Application Markup Language (XAML) です。XAML は、ユーザー インターフェイスの構築用にマイクロソフトが作成した言語です。XAML を Xamarin Forms と組み合わせて、また、ユニバーサル Windows ア プリ、iOS、Android 向けのユーザー インターフェイスの構築にも使用できます。 XAML は、Visual Studio やその他のよく使用されているデザインツールから利用できます。
   
 
 #### 2-2-2. アプリ実行部分 (MainPage.xaml.cs) のコーディング
 
-7. [**ソリューションエクスプローラー**] ウィンドウから、**MainPage.xaml.cs** を開きます。  
+8. [**ソリューションエクスプローラー**] ウィンドウから、**MainPage.xaml.cs** を開きます。  
 <img src="media/CognitiveXamarinHOL_201806_87.PNG" width="450" height="291">
 
-8. ページの上部に既にある using ステートメントに、以下の using ステートメントを追加し、インストールしたライブラリーが利用できるようにします。  
+9. ページの上部に既にある using ステートメントに、以下の using ステートメントを追加し、インストールしたライブラリーが利用できるようにします。  
 ```
 using Microsoft.ProjectOxford.Face;
 using Plugin.Media;
@@ -68,7 +74,7 @@ using PCLExt.FileStorage.Files;
 ```  
 <img src="media/CognitiveXamarinHOL_201806_88.PNG" width="450" height="291">
 
-9. `MainPage.xaml.cs` の `MainPage : Content Page` の中にアプリの実行部分のコードを追加していきます。まずはデバイスで写真を撮る `TakePhotoAsync` と デバイスに保存された写真を選択する `PiclPhotoAsync` を追加します。
+10. `MainPage.xaml.cs` の `MainPage : Content Page` の中にアプリの実行部分のコードを追加していきます。まずはデバイスで写真を撮る `TakePhotoAsync` と デバイスに保存された写真を選択する `PiclPhotoAsync` を追加します。
 ```
 public static async Task<string> TakePhotoAsync()
 {
@@ -81,7 +87,7 @@ public static async Task<string> PickPhotoAsync()
 ```   
 <img src="media/CognitiveXamarinHOL_201806_89.PNG" width="450" height="291">  
 
-10. `TakePhotoAsync` と `PickPhotoAsync` の実行コードを以下のように記述します。  
+11. `TakePhotoAsync` と `PickPhotoAsync` の実行コードを以下のように記述します。  
 ```
 public static async Task<string> TakePhotoAsync()
 {
@@ -113,7 +119,7 @@ public static async Task<string> PickPhotoAsync()
 ```  
 <img src="media/CognitiveXamarinHOL_201806_90.PNG" width="450" height="291">  
 
-11. 今度は Cognitive Services Face API を呼び出して写真判定を実行するコードを追加していきます。まずは Face API から得られる分析データを格納する `FaceDetectResult` クラスを、`MainPage : Content Page` の中に作成します。  
+12. 今度は Cognitive Services Face API を呼び出して写真判定を実行するコードを追加していきます。まずは Face API から得られる分析データを格納する `FaceDetectResult` クラスを、`MainPage : Content Page` の中に作成します。  
 ```
 public class FaceDetectResult
 {
