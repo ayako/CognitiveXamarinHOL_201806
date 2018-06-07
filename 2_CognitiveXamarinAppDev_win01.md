@@ -48,7 +48,7 @@ NuGet は、Microsoft 管理プラットフォーム向けの無料のオープ�
 
 <img src="media/CognitiveXamarinHOL_201806_59.PNG" width="450" height="291">
 
-11. 次に、 [参照] タブの検索ボックスに、*face* と入力します。 **Microsoft.ProjectOxford.Face** を選択して。**CognitiveFaceApp のプロジェクトのみ** に チェック ✓ をつけます。[**インストール**] をクリックして、最新の安定版 のパッケージのインストールを行います。このライブラリーには Cognitive Services Face API のヘルパー API が含まれています。
+11. 次に、 [参照] タブの検索ボックスに、*face* と入力します。 **Microsoft.ProjectOxford.Face.DotNetStandard** を選択して、**CognitiveFaceApp のプロジェクトのみ** に チェック ✓ をつけます。[**インストール**] をクリックして、最新の安定版 のパッケージのインストールを行います。このライブラリーには Cognitive Services Face API のヘルパー API が含まれています。
 
 <img src="media/CognitiveXamarinHOL_201806_60.PNG" width="450" height="291">
 
@@ -56,11 +56,11 @@ NuGet は、Microsoft 管理プラットフォーム向けの無料のオープ�
 
 <img src="media/CognitiveXamarinHOL_201806_61.PNG" width="278" height="148">
 
-13. 今度は、[参照] タブの検索ボックスに、*pcl storage* と入力します。 **PCLExt.FileStorage** を選択して。**CognitiveFaceApp のプロジェクトのみ** に チェック ✓ をつけます。[**インストール**] をクリックして、最新の安定版 のパッケージをインストールします。このライブラリーには、モバイルデバイス内のストレージ(に保存された写真)を利用するための SDK が含まれています。
+13. 今度は、[参照] タブの検索ボックスに、*pcl storage* と入力します。 **PCLExt.FileStorage** を選択して、**CognitiveFaceApp のプロジェクトのみ** に チェック ✓ をつけます。[**インストール**] をクリックして、最新の安定版 のパッケージをインストールします。このライブラリーには、モバイルデバイス内のストレージ(に保存された写真)を利用するための SDK が含まれています。
 
 <img src="media/CognitiveXamarinHOL_201806_62.PNG" width="450" height="291">
 
-14. 最後に、[参照] タブの検索ボックスに、*xam media* と入力します。 **Xam.Plugin.Media** を選択して。**CognitiveFaceApp のプロジェクトのみ** に チェック ✓ をつけます。[**インストール**] をクリックして、最新の安定版 のパッケージをインストールします。このライブラリーには、モバイルデバイスのカメラやマイクを利用するための SDK が含まれています。
+14. 最後に、[参照] タブの検索ボックスに、*xam media* と入力します。 **Xam.Plugin.Media** を選択して、**CognitiveFaceApp のプロジェクトのみ** に チェック ✓ をつけます。[**インストール**] をクリックして、最新の安定版 のパッケージをインストールします。このライブラリーには、モバイルデバイスのカメラやマイクを利用するための SDK が含まれています。
 
 <img src="media/CognitiveXamarinHOL_201806_63.PNG" width="450" height="291">
 
