@@ -15,7 +15,7 @@
 2. **CognitiveFaceApp** プロジェクトの中にある **MainPage.xaml** をクリックして開きます。  
 <img src="media/CognitiveXamarinHOL_201806_82.PNG" width="450" height="291">
 
-3. `<ContentPage ...>` と `</Contentpage>` を以下のコード(ContentPage.Content 要素)に書き換えます。このコードでは、写真を表示するグリッド、2 種類の操作ボタン (写真の選択、リセット)、および 判 定した年齢、性別、感情を表示するラベルを作成します。
+3. `<StackLayout>` から `</StackLayout>` までを以下のコード(ContentPage.Content 要素)に書き換えます。このコードでは、写真を表示するグリッド、2 種類の操作ボタン (写真の選択、リセット)、および 判 定した年齢、性別、感情を表示するラベルを作成します。
 ```
 <ContentPage.Content>
         <StackLayout>
@@ -130,7 +130,7 @@ public static async Task<FaceDetectResult> DetectFaceAsync(string photoPath)
 {
     // Face API 呼び出し準備
     var apiKey = "YOUR_API_KEY";
-    var apiEndpoint = "https://YOUR_API_LOCATION.api.cognitive.microsoft.com/face/v1.0";
+    var apiEndPoint = "https://YOUR_API_LOCATION.api.cognitive.microsoft.com/face/v1.0";
     var client = new FaceServiceClient(apiKey, apiEndPoint);
 
     // Face API で判定
@@ -226,7 +226,7 @@ private async void RunButton_OnClicked(object sender, EventArgs e)
 
     // 画像の判定
     ImagePreview.Source = photo;
-    var faceResult = new FaceDetectResult();
+    FaceDetectResult faceResult;
 
     try
     {
