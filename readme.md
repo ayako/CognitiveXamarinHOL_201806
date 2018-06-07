@@ -19,6 +19,6 @@ Cognitive Services で提供している 視覚・音声・言語・知識・検
 
 Cognitive Services を利用することで、AI を活用したアプリが容易に作成できます。一つのコードからマルチデバイス(Windows, iOS, Android)で利用できるアプリを開発できる Xamarin をベースとして、画像を分析するスマホ向けアプリを開発します。
 
-[2-1. 新しい Xamarin プロジェクトの作成 と ライブラリーのインストール](2_CognitiveXamarinAppDev_win01.md)
+[2-1. 新しい Xamarin プロジェクトの作成 と ライブラリのインストール](2_CognitiveXamarinAppDev_win01.md)
 
 [2-2. Xamarin.Forms を利用した マルチデバイス向けアプリの作成](2_CognitiveXamarinAppDev_win02.md)

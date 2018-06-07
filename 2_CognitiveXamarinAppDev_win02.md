@@ -136,7 +136,7 @@ public static async Task<FaceDetectResult> DetectFaceAsync(string photoPath)
 {
     // Face API 呼び出し準備
     var apiKey = "YOUR_API_KEY";
-    var apiEndpoint = "https://YOUR_API_LOCATION.api.cognitive.microsoft.com/face/v1.0";
+    var apiEndPoint = "https://YOUR_API_LOCATION.api.cognitive.microsoft.com/face/v1.0";
     var client = new FaceServiceClient(apiKey, apiEndPoint);
 
     // Face API で判定
