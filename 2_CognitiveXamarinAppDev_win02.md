@@ -49,8 +49,8 @@
 6. アプリのウインドウを閉じ、Visual Studio の上部ツールバーから [デバッグの停止] をクリックして、デバッグを終了します。  
 <img src="media/CognitiveXamarinHOL_201806_86.PNG" width="450" height="291">
 
-```
 7. [写真の選択] ボタン、および [リセット] ボタンが押される動作を取得するため、それぞれのボタンに Clicked イベントハンドラーを追加します。
+```
 <Button Grid.Row="1" Clicked="RunButton_OnClicked" Text="写真の選択" />
 <Button Grid.Row="2" Clicked="ResetButton_OnClicked" Text="リセット" />
 ```
@@ -136,8 +136,8 @@ public static async Task<FaceDetectResult> DetectFaceAsync(string photoPath)
 {
     // Face API 呼び出し準備
     var apiKey = "YOUR_API_KEY";
-    var apiEndPoint = "https://YOUR_API_LOCATION.api.cognitive.microsoft.com/face/v1.0";
-    var client = new FaceServiceClient(apiKey, apiEndPoint);
+    var apiEndpoint = "https://YOUR_API_LOCATION.api.cognitive.microsoft.com/face/v1.0";
+    var client = new FaceServiceClient(apiKey, apiEndpoint);
 
     // Face API で判定
     var file = new FileFromPath(photoPath);
