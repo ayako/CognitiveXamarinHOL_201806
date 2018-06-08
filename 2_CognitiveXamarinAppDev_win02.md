@@ -193,7 +193,7 @@ private async void RunButton_OnClicked(object sender, EventArgs e)
 
     // 画像の判定
     ImagePreview.Source = photo;
-    var faceResult = new FaceDetectResult();
+    FaceDetectResult faceResult;
 
     faceResult = await DetectFaceAsync(photo);
 
