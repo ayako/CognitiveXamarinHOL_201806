@@ -15,7 +15,6 @@
                 <Image x:Name="ImagePreview" Grid.Row="0" HorizontalOptions="Center"/>
                 <Button Grid.Row="1" Clicked="RunButton_OnClicked" Text="写真の選択" />
                 <Button Grid.Row="2" Clicked="ResetButton_OnClicked" Text="リセット" />
-
                 <StackLayout Grid.Row="3" HorizontalOptions="Center">
                     <Label x:Name="Age">年齢</Label>
                     <Label x:Name="Gender">性別</Label>
@@ -24,5 +23,5 @@
             </Grid>
         </StackLayout>
     </ContentPage.Content>
-
+    
 </ContentPage>

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{1FB01314-C984-42D9-83D9-1149F418BB8C}</ProjectGuid>
+    <ProjectGuid>{8B9834EC-A90F-459D-8F9B-687AADED1752}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CognitiveFaceApp.UWP</RootNamespace>
@@ -148,15 +148,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Bcl.Build">
-      <Version>1.0.21</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CognitiveFaceApp\CognitiveFaceApp.csproj">
-      <Project>{5A42DB94-ACEC-4696-955F-19728729146C}</Project>
+      <Project>{498E19F4-8C5D-4348-AC3B-93C29091DB59}</Project>
       <Name>CognitiveFaceApp</Name>
     </ProjectReference>
   </ItemGroup>

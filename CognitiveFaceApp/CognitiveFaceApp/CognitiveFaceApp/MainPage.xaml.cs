@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Microsoft.ProjectOxford.Face;
@@ -115,7 +118,7 @@ namespace CognitiveFaceApp
 
             var attributes = new FaceAttributeType[] {
                 FaceAttributeType.Age,FaceAttributeType.Gender,FaceAttributeType.Smile,
-            };
+                };
             var result = await client.DetectAsync(imageStream, false, false, attributes);
 
             // 判定結果を代入
@@ -127,7 +130,5 @@ namespace CognitiveFaceApp
 
             return detectResult;
         }
-
     }
-
 }
