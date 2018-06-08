@@ -56,7 +56,7 @@ NuGet は、Microsoft 管理プラットフォーム向けの無料のオープ�
 
 <img src="media/CognitiveXamarinHOL_201806_60.PNG" width="450" height="291">
 
-12. 先ほどと同様に、変更の確認に [OK] をクリック、パッケージのライセンスに [同意] をクリックしてインストールします。
+12. 変更の確認を求められたら [OK] をクリックして進みます。ダウンロードしたパッケージのライセンスへの同意を求められたら [同意する] をクリックして、インストールします。
 
 <img src="media/CognitiveXamarinHOL_201806_61.PNG" width="278" height="148">
 
