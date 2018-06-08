@@ -32,31 +32,42 @@
 
 NuGet は、Microsoft 管理プラットフォーム向けの無料のオープンソース パッケージです。 NuGet では、さまざまなタスクを実行するコードが収録された数千ものライブラリのパ ッケージを利用できます。NuGet は Visual Studio 2017 に統合されており、簡単に NuGet 経由でパッケージをプロジェクトに追加、管理することができます。  
 
+<!--
 6. 左列の **ソリューション** から、**CognitiveFaceApp.Android** プロジェクトをクリックし、[**パッケージの追加..**] を選択します。  
+-->
+<!-- img src="media/CognitiveXamarinHOL_201806_56m.jpg" width="480" height="300" -->  
 
-<img src="media/CognitiveXamarinHOL_201806_56m.jpg" width="480" height="300">  
-
+<!--
 7. [**パッケージを追加**] 画面で、右上の検索ボックスに *bcl build* と入力して **Microsoft.Bcl.Build** を 探して選択します。画面右列の **バージョン** は **1.0.14** を選択します。画面右下の [**パッケージを追加**] をクリック して、インストールを行います。
+-->
 
-<img src="media/CognitiveXamarinHOL_201806_57m.jpg" width="480" height="300">  
+<!-- img src="media/CognitiveXamarinHOL_201806_57m.jpg" width="480" height="300" -->  
 
+<!--
 8. ダウンロードしたパッケージのライセンスへの同意を求められたら [同意する] をクリックして、インストールします。
+-->
 
-<img src="media/CognitiveXamarinHOL_201806_58m.jpg" width="480" height="300">  
+<!-- img src="media/CognitiveXamarinHOL_201806_58m.jpg" width="480" height="300" -->  
 
+<!--
 9. 下部の [パッケージコンソール] に **==========終了==========** と表示されたら、BCL Build のパッケージのインストールは終了です。
+-->
 
+<!--
 10. 同様に、左列の **ソリューション** から、**CognitiveFaceApp.iOS** プロジェクトをクリックし、[**パッケージの追加..**] を選択、**Microsoft.Bcl.Build** をインストールします。
+-->
 
+<!--
 11. 左列の **ソリューション** から、**CognitiveFaceApp** ソリューションの下にある **CognitiveFaceApp** プロジェクトの **依存関係** をクリックして [**パッケージの追加..**] を選択、同様に **Microsoft.Bcl.Build** をインストールします。
+-->
 
-<img src="media/CognitiveXamarinHOL_201806_59m.jpg" width="480" height="300">  
+<!-- img src="media/CognitiveXamarinHOL_201806_59m.jpg" width="480" height="300" -->  
 
-12. **CognitiveFaceApp** プロジェクト にはさらに 3 種類のパッケージを追加します。[**パッケージの追加**] 画面の検索ボックスに *face* と入力して、**Microsoft.ProjectOxford.Face.DotNetStandard** を探します。バージョンはデフォルトのまま、[**パッケージの追加..**] をクリックして、最新の安定版 のパッケージのインストールを行います。このライブラリには Cognitive Services Face API のヘルパー API が含まれています。
+12. **CognitiveFaceApp** プロジェクト に 3 種類のパッケージを追加します。[**パッケージの追加**] 画面の検索ボックスに *face* と入力して、**Microsoft.ProjectOxford.Face.DotNetStandard** を探します。バージョンはデフォルトのまま、[**パッケージの追加..**] をクリックして、最新の安定版 のパッケージのインストールを行います。このライブラリには Cognitive Services Face API のヘルパー API が含まれています。
 
 <img src="media/CognitiveXamarinHOL_201806_60m.jpg" width="480" height="300">  
 
-13. 先ほどと同様に、ライセンスへの同意を求められたら [同意する] をクリックして、インストールします。
+13. ダウンロードしたパッケージのライセンスへの同意を求められたら [同意する] をクリックして、インストールします。
 
 <img src="media/CognitiveXamarinHOL_201806_61m.jpg" width="480" height="300">  
 
