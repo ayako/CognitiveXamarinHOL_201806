@@ -18,7 +18,7 @@
 
 <img src="media/CognitiveXamarinHOL_201806_53.PNG" width="450" height="291">  
 
-4. *要確認* ユニバーサル Windows アプリケーションがサポートする、既定のターゲット バージ ョンと最小バージョンを確認し、[**OK**] をクリックします。  
+4. ユニバーサル Windows アプリケーションがサポートする、既定のターゲット バージ ョンと最小バージョン の確認が面が出る場合は、それぞれバージョンを確認し、[**OK**] をクリックします。  
 
 #### NuGet によるパッケージの管理と Cognitive Services Face API Client Library および 必要なパッケージのインストール  
 
@@ -36,17 +36,21 @@ NuGet は、Microsoft 管理プラットフォーム向けの無料のオープ�
 
 <img src="media/CognitiveXamarinHOL_201806_56.PNG" width="450" height="291">
 
+<!--
 8. [**参照**] タブをクリックします。検索ボックスに *bcl build* と入力して **Microsoft.Bcl.Build** を 探して選択します。すべてのプロジェクトに チェック ✓ をつけ、バージョンは 1.0.14 を選択、[**インストール**] をクリック してパッケージのインストールを行います。
+-->
 
-<img src="media/CognitiveXamarinHOL_201806_57.PNG" width="450" height="291">
+<!-- img src="media/CognitiveXamarinHOL_201806_57.PNG" width="450" height="291" -->
 
+<!--
 9. 変更の確認を求められたら [OK] をクリックして進みます。ダウンロードしたパッケージのライセンスへの同意を求められたら [同意する] をクリックして、インストールします。
+-->
+<!-- img src="media/CognitiveXamarinHOL_201806_58.PNG" width="278" height="148" -->
 
-<img src="media/CognitiveXamarinHOL_201806_58.PNG" width="278" height="148">
-
+<!--
 10. [出力] ウィンドウに **==========終了==========** と表示されたら、BCL Build のパッケージのインストールは終了です。
-
-<img src="media/CognitiveXamarinHOL_201806_59.PNG" width="450" height="291">
+-->
+<!-- img src="media/CognitiveXamarinHOL_201806_59.PNG" width="450" height="291" -->
 
 11. 次に、 [参照] タブの検索ボックスに、*face* と入力します。 **Microsoft.ProjectOxford.Face.DotNetStandard** を選択して、**CognitiveFaceApp のプロジェクトのみ** に チェック ✓ をつけます。[**インストール**] をクリックして、最新の安定版 のパッケージのインストールを行います。このライブラリには Cognitive Services Face API のヘルパー API が含まれています。
 
