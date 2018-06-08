@@ -10,7 +10,7 @@
 
 <img src="media/CognitiveXamarinHOL_201806_51.PNG" width="450" height="291">  
 
-2. **新しいプロジェクト** の画面で、左列から **Visual C#** > **Cross Platform** を選択、 中央のパネルから **Mobile App (Xamarin.Forms)** を選択します。画面下列の **名前** の欄に *CognitiveFaceApp* という名前を入力し、[**OK**] をクリックして新規プロジェクトを 作成します。  
+2. **新しいプロジェクト** の画面で、左列から **Visual C#** > **Cross Platform** を選択、 中央のパネルから **Mobile App (Xamarin.Forms)** を選択します。画面下列の **名前** の欄に *CognitiveFaceApp* という名前を入力し、[**OK**] をクリックして新規プロジェクトを作成します。  
 
 <img src="media/CognitiveXamarinHOL_201806_52.PNG" width="450" height="291">  
 
@@ -36,7 +36,7 @@ NuGet は、Microsoft 管理プラットフォーム向けの無料のオープ�
 
 <img src="media/CognitiveXamarinHOL_201806_56.PNG" width="450" height="291">
 
-8. [**参照**] タブをクリックします。検索ボックスに *bcl build* と入力して **Microsoft.Bcl.Build** を 探して選択します。すべてのプロジェクトに チェック ✓ をつけ、[**インストール**] をクリック して、最新の安定版 のパッケージのインストールを行います。
+8. [**参照**] タブをクリックします。検索ボックスに *bcl build* と入力して **Microsoft.Bcl.Build** を 探して選択します。すべてのプロジェクトに チェック ✓ をつけ、バージョンは 1.0.14 を選択、[**インストール**] をクリック してパッケージのインストールを行います。
 
 <img src="media/CognitiveXamarinHOL_201806_57.PNG" width="450" height="291">
 

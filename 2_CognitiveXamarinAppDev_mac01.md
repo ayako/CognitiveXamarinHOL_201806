@@ -68,9 +68,9 @@ NuGet は、Microsoft 管理プラットフォーム向けの無料のオープ�
 
 <img src="media/CognitiveXamarinHOL_201806_63m.jpg" width="480" height="300">  
 
-15. Xam.Plugin.Media のインストール後、これを利用するためのガイドが表示されます。以下の手順で 各デバイス向けの設定を行います。
+15. Xam.Plugin.Media のインストール後、これを利用するためのガイドが表示されます。次の手順で 各デバイス向けの設定を行います。
 
-<img src="media/CognitiveXamarinHOL_201806_64m.jpg" width="480" height="300">  
+<!-- img src="media/CognitiveXamarinHOL_201806_64m.jpg" width="480" height="300" -->  
 
 #### iOS 向け設定
 
